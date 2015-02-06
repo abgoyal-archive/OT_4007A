@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content" android:layout_height="wrap_content"
+	android:orientation="vertical" android:numColumns="2">
+	<include android:id="@+id/mms_widget_setting_grid_cell_1" layout="@layout/contact_card" />
+	<include android:id="@+id/mms_widget_setting_grid_cell_2" layout="@layout/contact_card" />
+	<include android:id="@+id/mms_widget_setting_grid_cell_3" layout="@layout/contact_card" />
+	<include android:id="@+id/mms_widget_setting_grid_cell_4" layout="@layout/contact_card" />
+</GridLayout>

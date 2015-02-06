@@ -1,0 +1,16 @@
+export PATH=~/Your_Toolchain_PATH/ 
+for_example  /alps/prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin:$PATH
+
+Buile command:
+
+uboot
+=====
+cd <uboot path>
+TARGET_PRODUCT=jrdhz75_gb2 make jrdhz75_gb2_config
+TARGET_PRODUCT=jrdhz75_gb2 make 
+
+kernel
+======
+cd <kernel path>
+cp mediatek-configs .config
+TARGET_PRODUCT=jrdhz75_gb2 MTK_ROOT_CUSTOM=../mediatek/custom make

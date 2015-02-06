@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="menu_height">96px</dimen>
+    <dimen name="btn_grid_padding">6dp</dimen>
+    <dimen name="call_card_main_margin">18dp</dimen>
+    <dimen name="call_card_second_margin">16dp</dimen>
+    <dimen name="call_card_title_margin">10dip</dimen>
+
+    <dimen name="dtmfdigits_height">75dip</dimen>
+    <dimen name="dtmfdigits_margin_top">5dip</dimen>
+    <dimen name="dtmfdigits_margin_bottom">3dip</dimen>
+
+    <!-- added by xingping.zheng start -->
+    <dimen name="incall_btn_group_width">132px</dimen>
+    <dimen name="incall_btn_group_height">90px</dimen>
+    <dimen name="incall_btn_group_margin_bottom">40px</dimen>
+    <dimen name="incall_btn_group_margin_internal">8px</dimen>
+    <dimen name="incall_btn_group_margin_left">64px</dimen>
+    <dimen name="incall_btn_group_margin_right">64px</dimen>
+    <dimen name="incall_btn_group_text_size">18px</dimen>
+    <dimen name="incall_btn_group_padding_top">7px</dimen>
+    
+    <dimen name="incall_btn_end_call_width">411px</dimen>
+    <dimen name="incall_btn_end_call_height">65px</dimen>
+    <dimen name="incall_btn_end_call_margin_top">40px</dimen>
+    <dimen name="incall_btn_end_call_text_size">28px</dimen>
+    
+    <dimen name="incall_status_height">90px</dimen>
+    <dimen name="incall_status0_height">45px</dimen>
+    <dimen name="incall_status_view0_margin_top">14px</dimen>
+    <dimen name="incall_status_view1_margin_top">11px</dimen>
+    <dimen name="incall_status_view4_margin_top">12px</dimen>
+    <dimen name="incall_status_left_internal_margin">13px</dimen>
+    <dimen name="incall_status_left_margin">23px</dimen>
+    <dimen name="incall_status_right_internal_margin">12px</dimen>
+    <dimen name="incall_status_right_margin">23px</dimen>
+    <dimen name="incall_status_text_size0">27px</dimen>
+    <dimen name="incall_status_text_size4">16px</dimen>
+    
+    <dimen name="incall_card_margin_top">200px</dimen>
+    <dimen name="incall_card_name_text_size">45px</dimen>
+    <dimen name="incall_card_label_text_size">24px</dimen>
+    <dimen name="incall_card_name_margin_top">-32px</dimen>
+    <dimen name="incall_card_name_margin_bottom">9px</dimen>
+    <dimen name="incall_card_button_margin_left">20px</dimen>
+    <dimen name="incall_card_button_margin_top">18px</dimen>
+    
+    <dimen name="dtmf_bottom_buttons_margin_bottom">31px</dimen>
+    <dimen name="dtmf_bottom_buttons_margin_top">31px</dimen>
+    <dimen name="dtmf_bottom_buttons_margin_internal">42px</dimen>
+    <dimen name="dtmf_end_button_width">181px</dimen>
+    <dimen name="dtmf_end_button_height">65px</dimen>
+    <dimen name="dtmf_hide_button_width">230px</dimen>
+    <dimen name="dtmf_hide_button_height">65px</dimen>
+    <dimen name="dtmf_dial_button_width">180px</dimen>
+    <dimen name="dtmf_dial_button_height">84px</dimen>
+    <dimen name="dtmf_dialpad_margin_top">250dip</dimen>
+    <dimen name="dtmf_digits_margin">6dip</dimen>
+    <dimen name="dtmf_digits_height">57dip</dimen>
+    <dimen name="dtmf_digits_text_size">32sp</dimen>
+    
+    <dimen name="manage_conference_padding_top">90px</dimen>
+    <dimen name="manage_conference_button_width">211px</dimen>
+    <dimen name="manage_conference_button_height">65px</dimen>
+    <dimen name="manage_conference_button_margin_bottom">31px</dimen>
+    <dimen name="manage_conference_button_margin">40px</dimen>
+    <dimen name="manage_conference_button_end_height">45px</dimen>
+    <dimen name="manage_conference_button_end_width">84px</dimen>
+    <dimen name="manage_conference_button_private_width">93px</dimen>
+
+    <dimen name="incoming_call_button_width">190px</dimen>
+    <dimen name="incoming_call_button_height">65px</dimen>
+    <dimen name="incoming_call_button_margin_bottom">90px</dimen>
+    <dimen name="incoming_call_button_margin_internal">54px</dimen>
+    <dimen name="incoming_call_button_margin">53px</dimen>
+    <dimen name="incoming_call_slidingbar_width">470px</dimen>
+    <dimen name="incoming_call_slidingbar_height">65px</dimen>
+    
+    <!-- added by xingping.zheng end -->
+    
+    <dimen name="vt_incall_phone_number_max_width_when_recording">418px</dimen>
+    <dimen name="vt_incall_phone_number_max_width">480px</dimen>
+</resources>

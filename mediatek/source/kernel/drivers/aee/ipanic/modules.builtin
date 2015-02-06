@@ -1,0 +1,3 @@
+kernel/../mediatek/source/kernel/drivers/aee/ipanic/ipanic.ko
+kernel/../mediatek/source/kernel/drivers/aee/ipanic/ipanic-utils.ko
+kernel/../mediatek/source/kernel/drivers/aee/ipanic/ipanic-emmc.ko

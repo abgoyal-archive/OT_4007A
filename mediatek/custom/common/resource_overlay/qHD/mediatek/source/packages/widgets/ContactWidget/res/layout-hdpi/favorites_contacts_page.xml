@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<android.widget.GridLayout
+    android:orientation="vertical"
+    android:id="@id/favorites_contacts_page_grid"
+    android:tag="tag_favorites_contacts_page_grid"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:horizontalSpacing="8.0dip"
+    android:verticalSpacing="8.0dip"
+    android:numColumns="2"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@id/favorites_contacts_page_grid_1"
+        layout="@layout/favorites_contacts_page_griditem"
+        />
+    <include
+        android:id="@id/favorites_contacts_page_grid_2"
+        layout="@layout/favorites_contacts_page_griditem"
+        />
+    <include
+        android:id="@id/favorites_contacts_page_grid_3"
+        layout="@layout/favorites_contacts_page_griditem"
+        />
+    <include
+        android:id="@id/favorites_contacts_page_grid_4"
+        layout="@layout/favorites_contacts_page_griditem"
+        />
+</android.widget.GridLayout>

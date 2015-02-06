@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="148.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView
+            android:id="@id/thumb"
+            android:layout_width="147.0dip"
+            android:layout_height="107.69998dip"
+            android:layout_marginTop="6.0dip"
+            android:scaleType="fitXY"
+            android:layout_centerHorizontal="true"
+            />
+        <ImageView
+            android:gravity="center"
+            android:id="@id/frame"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/grid_frame_with_black"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_centerInParent="true"
+            />
+        <TextView
+            android:textSize="15.0sp"
+            android:textColor="#ffffa800"
+            android:gravity="center_vertical"
+            android:id="@id/title"
+            android:paddingLeft="16.0px"
+            android:layout_width="fill_parent"
+            android:layout_height="29.0dip"
+            android:layout_marginLeft="6.0dip"
+            android:layout_marginRight="6.0dip"
+            android:layout_marginBottom="6.0dip"
+            android:singleLine="true"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+</LinearLayout>

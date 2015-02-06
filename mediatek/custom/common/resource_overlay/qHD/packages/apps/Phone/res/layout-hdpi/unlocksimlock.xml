@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2008 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/background_dark"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"       
+        android:orientation="vertical"
+        android:gravity = "right">
+        
+        <TextView android:id="@+id/headerText"
+            android:layout_width="match_parent"
+            android:layout_height="13dip"
+            android:gravity="center"
+            android:singleLine="false"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <Button
+            android:id="@+id/emergencyCall"
+            android:layout_width="wrap_content"
+            android:layout_height="45dip"            
+            android:background="@drawable/emergencyconfigure"
+            android:drawableLeft = "@drawable/emergencycallicon"
+            android:textSize = "30px"
+            android:textColor = "#F8EAEA"
+            android:ellipsize = "end"
+            android:singleLine="true"
+            android:layout_marginRight = "8dip"
+        />
+        <TextView android:id="@+id/BottomText"
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:gravity="center"
+            android:singleLine="false"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/unlockInfoDisplayGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="75dip"
+        android:gravity = "center"
+        android:orientation="vertical">
+        
+        <TextView 
+            android:id="@+id/unlockResultNotify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity = "center"
+            android:ellipsize = "end"
+            android:singleLine="true"
+            android:textSize = "36px"
+            android:textColor = "#FFFFFF" 
+            />    
+	    <TextView 
+	            android:id="@+id/unlockActionNotify"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"	            
+                android:textSize = "33px"
+                android:textColor = "#FFFFFF"
+                android:ellipsize = "end"
+                android:singleLine="true"
+	            android:gravity = "center"
+	            />
+        <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"		        
+		        android:orientation="horizontal"
+		         android:gravity = "center">
+		        <TextView 
+		            android:id="@+id/unlockForSIMNotify"
+		            android:layout_width="wrap_content"
+		            android:layout_height="match_parent"		            
+                    android:textSize = "33px"
+                    android:textColor = "#FFFFFF"
+		            android:gravity = "bottom"
+                    android:singleLine="true"
+                    android:ellipsize = "end"
+                    android:visibility ="gone"
+		            />
+		        <TextView 
+		            android:id="@+id/unlockSIMNameNotify"
+		            android:layout_width = "wrap_content"
+		            android:maxWidth = "100dip"
+		            android:layout_height="28dip"
+		            android:gravity = "center|center_vertical"
+                    android:textSize = "24px"                    	            	
+	            	android:ellipsize = "middle"
+                    android:singleLine="true"
+                    android:textColor = "#FFFFFF"
+		            />
+		       <TextView 
+		            android:id="@+id/unlockSIMCategoryNotify"
+		            android:layout_width="wrap_content"
+		            android:layout_height="match_parent"
+                    android:textSize = "24px"
+                    android:textColor = "#59771C"
+	            	android:gravity = "left|bottom"
+		            />		            	            
+        </LinearLayout>
+        	<TextView 
+	            android:id="@+id/unlockRetriesNotify"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+                android:textSize = "24px"
+                android:textColor = "#59771C"
+	            android:gravity = "center"
+	            android:ellipsize = "start"
+                android:singleLine="true"
+	            />
+	        <TextView 
+	            android:id="@+id/unlockSIMEmptyForSingleCard"
+	            android:layout_width = "wrap_content"
+	            android:maxWidth = "100dip"
+	            android:layout_height="28dip"
+	            android:gravity = "center|center_vertical"
+                android:textSize = "24px"                    	            	
+            	android:ellipsize = "middle"
+                android:singleLine="true"
+                android:visibility ="gone"
+		    />
+            <TextView android:id="@+id/DefaultSIMNameText"
+                android:visibility ="invisible"
+	            android:layout_width="match_parent"
+	            android:layout_height="20dip"
+	            android:gravity="center"
+	            android:singleLine="true"
+	            android:ellipsize="marquee"
+	            android:textColor = "#8E9190"
+	            android:textSize = "24px"
+	            android:marqueeRepeatLimit="marquee_forever"
+	            android:textAppearance="?android:attr/textAppearanceLarge"/> 
+	        <Button android:id="@+id/btnMoreInfo"
+	            android:visibility ="invisible"
+	            android:layout_width="wrap_content"
+	            android:layout_height="38dip"
+	            android:gravity="center"
+	            android:textSize = "22px"/> 
+	        <TextView android:id="@+id/BottomText2"
+	            android:layout_width="match_parent"
+	            android:layout_height="25dip"
+	            android:gravity="center"
+	            android:singleLine="false"
+	            android:ellipsize="marquee"
+	            android:marqueeRepeatLimit="marquee_forever"
+	            android:visibility = "gone"
+	            android:textAppearance="?android:attr/textAppearanceLarge"/>  
+        
+    </LinearLayout>
+            
+    <LinearLayout android:id="@+id/topDisplayGroup"
+        android:layout_width="match_parent"
+        android:layout_height="49dip"
+        android:background="@drawable/btnnokeyboradunclickd"               
+        android:orientation="horizontal"
+        android:gravity = "center_vertical"
+        >
+        <EditText android:id="@+id/pwdDisplay"
+            android:layout_width="285dip"
+            android:layout_height="41dip"
+            android:singleLine="true"
+            android:textSize = "32sp"
+            android:background="@drawable/edit_text_configure"
+            android:textColor="#FF4E4E4E"
+            android:focusable = "true"
+            android:focusableInTouchMode="true"
+            android:cursorVisible="true"
+            android:layout_marginTop="3dip"
+            android:layout_marginLeft="6dip"
+            android:gravity = "center"
+            />           
+        <ImageButton android:id="@+id/backspace"
+        	android:src="@drawable/btndeletenoarrow"
+            android:layout_width="60dip"
+            android:layout_height="47dip"
+            android:layout_marginTop="4dip"
+            android:layout_marginLeft="5dip"
+        />
+        
+    </LinearLayout>
+    <include
+        android:id="@+id/keyPad"
+        layout="@layout/simlock_keyboard"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topDisplayGroup"
+    />
+</LinearLayout>

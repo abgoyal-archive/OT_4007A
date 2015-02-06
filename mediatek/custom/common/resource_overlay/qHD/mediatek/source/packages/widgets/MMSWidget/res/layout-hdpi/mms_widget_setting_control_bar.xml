@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+	<ImageView android:tag="setting_back_button"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-1dip"
+		android:src="@drawable/selector_setting_back" />
+	<ImageView android:tag="setting_delete_button"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-1dip"
+		android:layout_alignParentRight="true" android:src="@drawable/selector_setting_delete" />
+</merge>

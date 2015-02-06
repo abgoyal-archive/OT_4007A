@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- XML resource file for the *children* of a CallCard used in the Phone app.
+     The CallCard itself is a subclass of FrameLayout, and its (single)
+     child is the LinearLayout found here.  (In the CallCard constructor,
+     we inflate this file and add it as a child.)
+     TODO: consider just <include>ing this directly from incall_screen.xml? -->
+<com.android.phone.CallCard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/callCard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="70dip">
+
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="145dp"
+        android:layout_height="140dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/incall_photo_border_lg"
+        android:contentDescription="@string/contactPhoto"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dip"
+        android:layout_gravity="top"
+        android:layout_marginTop="140dip">
+        <TextView
+            android:id="@+id/name"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="@dimen/incall_card_name_text_size"
+            android:singleLine="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:maxWidth="@dimen/incall_card_name_max_length"/>
+
+        <ImageView
+            android:id="@+id/voiceRecorderIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"                   
+            android:layout_marginRight="6dip"
+            android:layout_marginTop="@dimen/incall_card_button_margin_top"
+            android:layout_toLeftOf="@id/name"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/manageConferenceUiButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/incall_btn_round"
+            android:layout_marginTop="10dip"
+            android:layout_marginLeft="6dip"
+            android:layout_toRightOf="@id/name"/>
+    </RelativeLayout>
+
+    <TextView 
+        android:id="@+id/labelAndNumber"
+        android:textColor="#A3A3A3"
+        android:textSize="@dimen/incall_card_label_text_size"
+        android:singleLine="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dip"
+        android:layout_gravity="center_horizontal"/>
+
+    <!-- Call type indication: a special label and/or branding
+         for certain kinds of calls -->
+    <TextView android:id="@+id/callTypeLabel"
+              android:textAppearance="?android:attr/textAppearanceSmall"
+              android:textSize="16sp"
+              android:textColor="?android:attr/textColorSecondary"
+              android:maxLines="1"
+              android:ellipsize="end"
+              android:paddingLeft="10dip"
+              android:paddingRight="10dip"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="190dip"
+              android:layout_gravity="center_horizontal"
+              android:visibility="gone"
+              />
+
+    <!-- Social status -->
+    <TextView android:id="@+id/socialStatus"
+              android:textAppearance="?android:attr/textAppearanceSmall"
+              android:textSize="16sp"
+              android:textColor="?android:attr/textColorSecondary"
+              android:maxLines="2"
+              android:ellipsize="end"
+              android:paddingLeft="10dip"
+              android:paddingRight="10dip"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:visibility="gone"
+              />
+
+    <!-- The hint about the Menu button, below all the call info.
+         This is only ever shown on devices that actually have a
+         menu while in-call, i.e. it's never shown on devices where the
+         InCallTouchUi is enabled (see InCallScreen.updateMenuButtonHint().) -->
+    <TextView android:id="@+id/menuButtonHint"
+              android:text="@string/menuButtonHint"
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:textSize="18sp"
+              android:textColor="?android:attr/textColorSecondary"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="22dip"
+              android:layout_centerHorizontal="true"
+              android:visibility="gone"
+              />
+
+</com.android.phone.CallCard>

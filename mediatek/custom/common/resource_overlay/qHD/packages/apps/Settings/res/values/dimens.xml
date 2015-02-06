@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+    <dimen name="vpn_connect_margin_right">10sp</dimen>
+    <dimen name="vpn_connect_normal_text_size">15sp</dimen>
+    <dimen name="vpn_connect_input_box_label_width">92sp</dimen>
+    <!-- wallpaper entry -->
+    <dimen name="wallpaper_thumbnail_text_size">14dip</dimen>
+    <dimen name="wallpaper_thumbnail_text_offset">12dip</dimen>
+    <dimen name="wallpaper_thumbnail_width">75dip</dimen>
+    <dimen name="wallpaper_thumbnail_height">75dip</dimen>
+
+    <!-- The size of MTKBookmark title -->
+    <dimen name="title_size">21.6px</dimen>
+    <!-- The size of MTKBookmark info -->
+    <dimen name="info_size">14.4px</dimen>
+    <!-- Padding top of title -->
+    <dimen name="padding_top_title">18dip</dimen>
+    <!-- Padding top and down of info -->
+    <dimen name="padding_top_down_info">5dip</dimen>
+    <!-- Padding top and down of dot view -->
+    <dimen name="padding_top_down_dotview">15dip</dimen>
+    <!-- The gap between two adjacent dot -->
+    <dimen name="gap_between_dot">5dip</dimen>
+    <!-- The CoverFlow space -->
+    <dimen name="coverflow_space">3dip</dimen>
+    <dimen name="status_bar_height">25dip</dimen>
+</resources>

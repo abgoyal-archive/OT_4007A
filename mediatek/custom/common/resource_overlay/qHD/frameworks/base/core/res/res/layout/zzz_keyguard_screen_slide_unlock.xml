@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+**
+** Copyright 2009, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License")
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<!-- This is the general lock screen which shows information about the
+  state of the device, as well as instructions on how to get past it
+  depending on the state of the device.  It is the same for landscape
+  and portrait.-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tabunlock="http://schemas.android.com/apk/res/com.android.tabunlock"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:id="@+id/root">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView android:id="@+id/carrier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="8dip"
+            android:layout_marginLeft="13dip"
+            android:text="@android:string/lockscreen_carrier_default"
+            android:textSize="14sp"
+            android:textColor="#FFCCCCCC"
+            />
+
+        <TextView android:id="@+id/emergencyCallText"
+            android:text="@android:string/emergency_calls_only"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dip"
+            android:layout_marginTop="5dip"
+            android:layout_below="@id/carrier"
+            android:textSize="16sp"
+            />
+
+        <ImageView android:id="@+id/animateimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="165dip"
+            />
+
+
+        <!-- emergency call button shown when sim is missing or PUKd -->
+        <Button
+            android:id="@+id/emergencyCallButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="240dip"
+            android:layout_marginLeft="24dip"
+            android:maxWidth="160dip"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:drawableLeft="@drawable/ic_emergency"
+            style="@style/Widget.Button.Transparent"
+            android:drawablePadding="8dip"
+            android:visibility="visible"
+            android:text="@android:string/emergency_calls_only"
+            />
+
+          <TextView android:id="@+id/screenLocked"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dip"
+            android:layout_marginTop="285dip"
+            android:layout_marginBottom="5dip"
+            android:textSize="18sp"
+            android:maxLines="2"
+            />
+           
+        <!-- time and date   -->
+         <TextView android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dip"
+            android:layout_marginTop="330dip"
+            android:textSize="16sp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            />
+           
+        <com.android.internal.policy.impl.DigitalClock android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/date"
+            android:layout_marginTop="-10dip"
+            android:layout_marginLeft="3dip"
+            >
+            <TextView android:id="@+id/timeDisplay"
+                android:textColor="#FFFFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="none"
+                android:textSize="72sp"
+                />
+            <TextView android:id="@+id/am_pm"
+                android:textColor="#FFFFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/timeDisplay"
+                android:layout_alignTop="@id/timeDisplay"
+                android:layout_marginTop="18dip"
+                android:singleLine="true"
+                android:ellipsize="none"
+                android:textSize="14sp"
+                android:layout_marginLeft="8dip"
+            />
+            
+        </com.android.internal.policy.impl.DigitalClock>
+        
+
+        <!-- spacer above text entry field -->
+        <View android:id="@+id/weekpad_divider1"
+            android:background="@android:drawable/divider_horizontal_bright_opaque"
+            android:layout_below="@id/time"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            />
+
+       <include
+            android:id="@+id/weekpad"
+            layout="@layout/zzz_keyguard_screen_slide_unlock_weekpad"
+            />
+           
+        <!-- spacer above text entry field -->
+        <View android:id="@+id/weekpad_divider2"
+            android:background="@android:drawable/divider_horizontal_bright_opaque"
+            android:layout_below="@id/weekpad" 
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            />
+           
+        <LinearLayout android:id="@+id/unread_events"
+            android:layout_width="match_parent" 
+            android:layout_height="66dip"
+            android:layout_below="@+id/weekpad_divider2"
+            android:layout_marginTop="5dip"
+            android:orientation="horizontal">
+
+            <TextView android:id="@+id/event1"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content" 
+                android:layout_width="wrap_content"
+                android:paddingLeft="7dip"
+                android:drawablePadding="6dip"
+                android:textSize="16sp"
+                android:visibility="gone"
+                />
+
+            <TextView android:id="@+id/event2"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content" 
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="25dip" 
+                android:paddingLeft="12dip"
+                android:drawablePadding="6dip"
+                android:textSize="16sp"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

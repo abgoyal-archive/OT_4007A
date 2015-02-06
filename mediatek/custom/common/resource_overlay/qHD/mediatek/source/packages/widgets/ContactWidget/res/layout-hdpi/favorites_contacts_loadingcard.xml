@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout
+    android:id="@id/favorites_contacts_loadingcardLayout"
+    android:tag="tag_favorites_contacts_loadingcardLayout"
+    android:paddingTop="75.0dip"
+    android:visibility="visible"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:background="@drawable/frame"
+        android:layout_width="fill_parent"
+        android:layout_height="378.0dip"
+        android:layout_centerHorizontal="true"
+        />
+    <RelativeLayout
+        android:gravity="center_horizontal"
+        android:id="@id/favorite_friend"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:textSize="21.0sp"
+            android:typeface="sans"
+            android:textColor="@color/favorites_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.0px"
+            android:text="@string/favorites"
+            android:singleLine="true"
+            android:drawablePadding="4.0dip"
+            />
+        <TextView
+            android:textSize="21.0sp"
+            android:typeface="sans"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11.0px"
+            android:text="@string/favorites"
+            android:singleLine="true"
+            android:drawablePadding="4.0dip"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:gravity="center"
+        android:id="@id/myprogressbar "
+        android:paddingTop="44.0dip"
+        android:visibility="visible"
+        android:layout_width="fill_parent"
+        android:layout_height="367.0dip">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </RelativeLayout>
+</RelativeLayout>

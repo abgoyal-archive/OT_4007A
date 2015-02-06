@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0  
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+		android:id="@+id/VTInCallCanvas" 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent" 
+		android:visibility="gone"  
+		android:background="#000000">
+		<com.android.phone.VTCallStatus android:id="@+id/vt_call_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:layout_alignParentTop="true"/>	
+		<SurfaceView android:id="@+id/VTHighVideo" 
+			android:layout_centerHorizontal="true" 
+			android:layout_height="442px" 
+			android:layout_width="540px" 
+			android:layout_below="@id/vt_call_status">
+		</SurfaceView>	
+		<ImageButton android:id="@+id/VTHighUp" 
+			android:layout_width="80px"
+			android:layout_height="80px"
+			android:layout_alignTop="@id/VTHighVideo" 
+			android:layout_alignLeft="@id/VTHighVideo" 
+			android:layout_marginTop="30px"
+			android:layout_marginLeft="30px">
+		</ImageButton>				
+		<ImageButton android:id="@+id/VTHighDown" 
+			android:layout_width="80px"
+			android:layout_height="80px" 
+			android:layout_alignBottom="@id/VTHighVideo"
+			android:layout_alignLeft="@id/VTHighVideo" 
+			android:layout_marginBottom="30px"
+			android:layout_marginLeft="30px">
+		</ImageButton>
+		<RelativeLayout android:id="@+id/VTTransparencyArea" 
+			android:layout_height="45px"
+			android:layout_width="match_parent"
+			android:layout_alignBottom="@id/VTHighVideo"
+			android:background="#99121212">
+			<TextView android:id="@+id/VTPhoneNumber"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:textSize="18sp"  
+				android:textColor="#ffffff"
+				android:layout_centerInParent="true"
+				android:maxWidth="540px">
+			</TextView>
+			<ImageView android:id="@+id/VTVoiceRecording"
+				android:layout_height="wrap_content" 
+				android:layout_width="wrap_content" 
+				android:layout_toLeftOf="@id/VTPhoneNumber" 
+				android:layout_marginRight="8px" 
+				android:layout_centerVertical="true">
+			</ImageView>
+		</RelativeLayout>
+		<Button android:id="@+id/VTMute"
+			android:layout_alignParentRight="true" 
+			android:layout_below="@id/VTHighVideo" 
+			android:textSize="16sp" 
+			android:textColor="#ffffff"
+			android:gravity="left|center_vertical" 
+			android:drawablePadding="16px" 
+			android:layout_width="166px" 
+			android:layout_marginTop="83px" 
+			android:layout_height="70px"
+			android:layout_marginRight="11px"
+			android:paddingLeft="16px"
+			android:drawableLeft="@drawable/vt_incall_button_mute"
+			android:background="@drawable/vt_incall_button_background">>
+		</Button>
+		<Button android:id="@+id/VTSpeaker"
+			android:layout_alignParentRight="true"
+			android:layout_below="@id/VTMute" 
+			android:textColor="#ffffff" 
+			android:textSize="16sp" 
+			android:gravity="left|center_vertical" 
+			android:drawablePadding="16px" 
+			android:layout_width="166px" 
+			android:layout_marginTop="10px" 
+			android:layout_height="70px"
+			android:layout_marginRight="11px"
+			android:paddingLeft="16px"
+			android:drawableLeft="@drawable/vt_incall_button_speaker"
+			android:background="@drawable/vt_incall_button_background">>
+		</Button>
+		<Button android:id="@+id/VTHangUp"
+			android:layout_alignParentRight="true"
+			android:layout_below="@id/VTSpeaker" 
+			android:textColor="#ffffff" 
+			android:textSize="16sp"
+			android:gravity="left|center_vertical" 
+			android:drawablePadding="16px" 
+			android:layout_width="166px" 
+			android:layout_marginTop="10px" 
+			android:layout_height="70px"
+			android:layout_marginRight="11px"
+			android:paddingLeft="16px"
+			android:drawableLeft="@drawable/vt_incall_button_hangup"
+			android:background="@drawable/vt_incall_button_end_background">
+		</Button>
+		<SurfaceView android:id="@+id/VTLowVideo" 
+			android:layout_alignLeft="@id/VTHighVideo" 
+			android:layout_height="230px" 
+			android:layout_width="281px" 
+			android:layout_below="@id/VTHighVideo" 
+			android:layout_marginTop="83px"
+			android:layout_alignParentLeft="true"
+			android:layout_marginLeft="11px">
+		</SurfaceView>
+		<ImageButton android:id="@+id/VTLowUp"
+			android:layout_alignTop="@id/VTLowVideo"
+			android:layout_alignLeft="@id/VTLowVideo" 
+			android:layout_marginTop="20px"
+			android:layout_marginLeft="20px" 
+			android:layout_height="80px" 
+			android:layout_width="80px">
+		</ImageButton>
+		<ImageButton android:id="@+id/VTLowDown"
+			android:layout_alignBottom="@id/VTLowVideo" 
+			android:layout_alignLeft="@id/VTLowVideo" 
+			android:layout_height="80px" 
+			android:layout_width="80px" 
+			android:layout_marginBottom="20px"
+			android:layout_marginLeft="20px">
+		</ImageButton>
+	</RelativeLayout>

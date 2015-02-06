@@ -1,0 +1,76 @@
+<android.widget.MmsWidgetRemoteView  
+		xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/remoteview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+            <android.widget.MmsWidgetView 
+            android:id="@+id/staticview"
+            android:tag="tag_staticview"
+            android:layout_width="fill_parent" 
+            android:layout_height="fill_parent"
+            android:visibility="invisible">
+	            <FrameLayout android:id="@+id/fifthstaticcard"
+	                android:layout_centerHorizontal="true"
+	                android:layout_width="fill_parent" 
+	                android:layout_height="421dip">
+	                <include android:id="@+id/mms_card" layout="@layout/mms_card" />
+	                <include android:id="@+id/sms_card" layout="@layout/sms_card" />
+	            </FrameLayout>
+	            <FrameLayout android:id="@+id/forthstaticcard"
+	                android:layout_centerHorizontal="true"
+	                android:layout_width="fill_parent" 
+	                android:layout_height="421dip">
+	                <include android:id="@+id/mms_card" layout="@layout/mms_card" />
+	                <include android:id="@+id/sms_card" layout="@layout/sms_card" />
+	            </FrameLayout>
+	            <FrameLayout android:id="@+id/thirdstaticcard"
+	                android:layout_centerHorizontal="true"
+	                android:layout_width="fill_parent" 
+	                android:layout_height="421dip">
+	                <include android:id="@+id/mms_card" layout="@layout/mms_card" />
+	                <include android:id="@+id/sms_card" layout="@layout/sms_card" />
+	            </FrameLayout>
+	            <FrameLayout android:id="@+id/secondstaticcard"
+	                android:layout_centerHorizontal="true"
+	                android:layout_width="fill_parent" 
+	                android:layout_height="421dip">
+	                <include android:id="@+id/mms_card" layout="@layout/mms_card" />
+	                <include android:id="@+id/sms_card" layout="@layout/sms_card" />
+	            </FrameLayout>
+	            <FrameLayout android:id="@+id/firststaticcard"
+	                android:layout_centerHorizontal="true"
+	                android:layout_width="fill_parent" 
+	                android:layout_height="421dip">
+	                <include android:id="@+id/mms_card" layout="@layout/mms_card" />
+	                <include android:id="@+id/sms_card" layout="@layout/sms_card" />
+	            </FrameLayout>
+        </android.widget.MmsWidgetView>
+        <!-- add other view -->
+        <!-- empty message card view -->
+        <RelativeLayout android:id="@+id/emptycard"
+        		android:tag="tag_emptyview"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                android:layout_width="fill_parent" 
+                android:layout_height="fill_parent">
+                <FrameLayout android:id="@+id/emptycardLayout"
+	                android:layout_centerHorizontal="true"
+	                android:layout_width="fill_parent" 
+	                android:layout_height="490dip">
+                	<include android:id="@+id/empty_card" layout="@layout/empty_card" />
+                </FrameLayout>
+        </RelativeLayout>
+        <!-- loading view -->
+        <RelativeLayout android:id="@+id/loadingcard"
+        		android:tag="tag_loadingview"
+                android:layout_centerHorizontal="true"
+                android:layout_width="fill_parent" 
+                android:layout_height="fill_parent">
+                <FrameLayout android:id="@+id/loading"
+	                android:layout_centerHorizontal="true"
+	                android:layout_width="fill_parent" 
+	                android:layout_height="627px">
+                	<include android:id="@+id/loadingview" layout="@layout/loadingview" />
+                </FrameLayout>
+        </RelativeLayout>
+</android.widget.MmsWidgetRemoteView>

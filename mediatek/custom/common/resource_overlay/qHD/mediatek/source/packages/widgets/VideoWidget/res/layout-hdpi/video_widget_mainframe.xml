@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.video.MTKWidgetMovieView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="2dip"
+    android:layout_marginLeft="22dip"
+    android:layout_marginRight="22dip"
+    android:orientation="vertical">
+    <FrameLayout
+        android:id="@+id/video_frame"
+        android:layout_width="match_parent"
+        android:layout_height="204dip"
+        android:layout_gravity="center_horizontal">
+        <ImageView
+            android:id="@+id/video_background"
+            android:tag="background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/mtk_ic_video_widget_screen"/>
+        <FrameLayout
+            android:id="@+id/video_inside_frame"
+            android:tag="insideframe"
+            android:layout_width="264dip"
+            android:layout_height="198dip"
+            android:layout_gravity="center">
+            <android.widget.video.MTKWidgetImageView
+                android:id="@+id/video_foreground"
+                android:tag="foreground"
+                android:layout_width="264dip"
+                android:layout_height="198dip"
+                android:layout_gravity="center"
+                android:src="@drawable/mtk_ic_video_widget_foreground"/>
+            <android.widget.video.MTKWidgetVideoView
+                android:id="@+id/video_view"
+                android:tag="videoview"
+                android:layout_width="264dip"
+                android:layout_height="198dip"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+        </FrameLayout>
+    </FrameLayout>
+    <android.widget.video.MTKWidgetMediaController
+        android:id="@+id/media_controller"
+        android:tag="mediacontroller"
+        android:layout_width="match_parent"
+        android:layout_height="76dip"/>
+</android.widget.video.MTKWidgetMovieView>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/no_bookmark_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/empty_background"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        />
+    <TextView
+        android:textSize="18.0sp"
+        android:textColor="#ffffffff"
+        android:gravity="center"
+        android:id="@id/no_bookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:text="@string/no_bookmark"
+        android:shadowColor="#ff000000"
+        android:shadowRadius="2.0"
+        android:layout_centerHorizontal="true"
+        />
+</RelativeLayout>

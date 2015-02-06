@@ -1,0 +1,7 @@
+All qHD overlay resource will be placed here.
+The folder tree hierachy will be aligned with app. source tree hierachy.
+
+For example, LauncherPlus(its source is located under "packages/apps/LauncherPlus") 
+has qHD overlay resources, they should be placed under 
+"qHD/packages/apps/LauncherPlus/res/".
+

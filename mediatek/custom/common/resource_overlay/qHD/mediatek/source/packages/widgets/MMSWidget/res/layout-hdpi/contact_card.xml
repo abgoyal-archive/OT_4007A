@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:tag="contact_card_layout" android:layout_width="158dip"
+    android:layout_height="157dip">
+    <FrameLayout android:layout_width="154dip"
+        android:tag="contact_card_frame"
+        android:padding="9dip"
+        android:layout_height="148dip" android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:background="@drawable/setting_contact_card_bg">
+        <ImageView android:tag="contact_card_image"
+            android:layout_width="129dip" android:layout_height="118dip"
+            android:scaleType="fitXY"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="-2dip"/>
+        <TextView android:tag="contact_card_text"
+            android:layout_width="match_parent" android:layout_height="31dip"
+            android:layout_gravity="bottom|center_horizontal"
+            android:paddingLeft="4dip" android:paddingRight="4dip"
+            android:background="#7F000000" android:textColor="#FFFFA800"
+            android:textSize="15sp" android:gravity="left|center_vertical"
+            android:layout_marginBottom="7dip" 
+            android:layout_marginRight="3dip"
+            android:layout_marginLeft="3dip"
+            android:singleLine="true" />
+    </FrameLayout>
+    <ImageView android:tag="contact_card_delete_flag"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:src="@drawable/setting_delete_flag" android:layout_gravity="top|left"
+        android:visibility="invisible" />
+</RelativeLayout>

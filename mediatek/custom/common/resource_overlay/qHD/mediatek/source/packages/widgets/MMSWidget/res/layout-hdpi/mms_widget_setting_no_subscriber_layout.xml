@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:tag="mms_widget_setting_no_subscriber_layout"
+	android:layout_width="match_parent" android:layout_height="match_parent"
+	android:visibility="invisible">
+	<RelativeLayout android:layout_width="match_parent"
+		android:layout_height="256dip" android:layout_alignParentTop="true"
+		android:layout_centerHorizontal="true">
+		<FrameLayout android:tag="setting_add_button"
+			android:layout_width="154dip" android:layout_height="148dip"
+			android:layout_marginLeft="17dip"
+			android:layout_marginTop="24dip"
+			android:background="@drawable/setting_contact_card_bg"
+			android:clickable="true">
+			<ImageView android:layout_width="129dip" android:layout_height="118dip"
+            android:scaleType="fitXY"
+            android:layout_marginTop="-2dip"
+            android:layout_gravity="center_vertical|center_horizontal"
+			    android:src="@drawable/setting_add_card" />
+		</FrameLayout>
+
+		<TextView android:layout_width="240dip"
+			android:layout_height="95dip" android:layout_marginTop="171dip"
+			android:layout_centerHorizontal="true"
+			android:text="@string/decide_whose_message_you_want_to_display"
+                        android:gravity="center"
+			android:textSize="16sp" android:textColor="#FF000000" />
+		<TextView android:layout_width="240dip"
+			android:layout_height="95dip" android:layout_marginTop="170dip"
+			android:layout_centerHorizontal="true"
+			android:text="@string/decide_whose_message_you_want_to_display"
+                        android:gravity="center"
+			android:textSize="16sp" android:textColor="#FFe2e2e1" />
+	</RelativeLayout>
+	<include layout="@layout/mms_widget_setting_control_bar" />
+</RelativeLayout>

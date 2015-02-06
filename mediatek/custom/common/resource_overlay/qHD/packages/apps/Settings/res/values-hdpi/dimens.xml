@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <!-- The width of gallery image on the hdpi Device -->
+    <dimen name="image_width">324px</dimen>
+    <!-- The height of gallery image on the hdpi Device -->
+    <dimen name="image_height">576px</dimen>
+</resources>

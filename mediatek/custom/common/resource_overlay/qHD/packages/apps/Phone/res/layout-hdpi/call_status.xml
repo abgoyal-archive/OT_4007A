@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.phone.CallStatus
+             android:id="@+id/callStatus"
+             android:layout_width="match_parent" 
+             android:layout_height="@dimen/incall_status_height" 
+             xmlns:android="http://schemas.android.com/apk/res/android"
+             >
+
+        
+        <RelativeLayout android:id="@+id/callStatus0"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/incall_status0_height"
+                        android:layout_gravity="top"
+                        >
+                        
+            <TextView android:id="@+id/view0"
+                      android:layout_width="wrap_content"
+                      android:maxWidth="100dip"
+                      android:ellipsize="end"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentLeft="true"
+                      android:layout_centerVertical="true"
+                      android:layout_marginLeft="@dimen/incall_status_left_margin"
+                      android:textColor="#FFFFFF"
+                      android:singleLine="true"
+                      android:textSize="@dimen/incall_status_text_size0"/>
+
+            <TextView android:id="@+id/view1"
+                      android:layout_width="wrap_content"
+                      android:maxWidth="100dip"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="@dimen/incall_status_left_internal_margin"
+                      android:layout_centerVertical="true"
+                      android:layout_toRightOf="@id/view0"
+                      android:ellipsize="middle"
+                      android:singleLine="true"
+                      android:textColor="#FFFFFF"
+                      android:background="@drawable/sim_name_border"
+                      android:paddingTop="@dimen/sim_name_border_padding_top"
+                      android:paddingBottom="@dimen/sim_name_border_padding_top"
+                      android:paddingLeft="@dimen/sim_name_border_padding_left"
+                      android:paddingRight="@dimen/sim_name_border_padding_left"/>
+            
+            <TextView android:id="@+id/view3"
+                      android:layout_width="wrap_content"
+                      android:maxWidth="100dip"
+                      android:layout_height="wrap_content"
+                      android:layout_centerVertical="true"
+                      android:layout_alignParentRight="true"
+                      android:layout_marginRight="@dimen/incall_status_right_margin"
+                      android:singleLine="true"
+                      android:textColor="#FFFFFF"
+                      android:textSize="@dimen/incall_status_text_size0"/>
+            
+            <ImageView android:id="@+id/view2"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginRight="@dimen/incall_status_right_internal_margin"
+                       android:layout_toLeftOf="@id/view3"
+                       android:layout_centerVertical="true"
+                       />
+            
+        </RelativeLayout>
+    
+        <RelativeLayout android:id="@+id/callStatus1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/incall_status0_height"
+                        android:layout_gravity="bottom"
+                        >
+
+            <TextView android:id="@+id/view4"
+                      android:layout_width="wrap_content"
+                      android:maxWidth="100dip"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentLeft="true"
+                      android:layout_centerVertical="true"
+                      android:singleLine="true"
+                      android:textColor="#FFFFFF"
+                      android:layout_marginLeft="@dimen/incall_status_left_margin"
+                      android:textSize="@dimen/incall_status_text_size0"
+                      />
+
+            <TextView android:id="@+id/view5"
+                      android:layout_width="wrap_content"
+                      android:maxWidth="100dip"
+                      android:layout_height="wrap_content"
+                      android:layout_centerVertical="true"
+                      android:layout_marginLeft="@dimen/incall_status_left_internal_margin"
+                      android:layout_toRightOf="@id/view4"
+                      android:ellipsize="middle"
+                      android:singleLine="true"
+                      android:textColor="#FFFFFF"
+                      android:background="@drawable/sim_name_border"
+                      android:paddingTop="@dimen/sim_name_border_padding_top"
+                      android:paddingBottom="@dimen/sim_name_border_padding_top"
+                      android:paddingLeft="@dimen/sim_name_border_padding_left"
+                      android:paddingRight="@dimen/sim_name_border_padding_left"/>
+
+            <TextView android:id="@+id/view7"
+                      android:layout_width="wrap_content"
+                      android:maxWidth="100dip"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentRight="true"
+                      android:layout_centerVertical="true"
+                      android:layout_marginRight="@dimen/incall_status_right_margin"
+                      android:textColor="#FFFFFF"
+                      android:textSize="@dimen/incall_status_text_size0"/>
+
+            <ImageView android:id="@+id/view6"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginRight="@dimen/incall_status_right_internal_margin"
+                       android:layout_toLeftOf="@id/view7"
+                       android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+</com.android.phone.CallStatus>

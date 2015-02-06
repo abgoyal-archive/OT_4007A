@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<!-- LinearLayout FrameLayout -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/twelve_key_dialer"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFFFF">
+
+    <ListView android:id="@+id/dialpadChooser"
+        style="@style/ContactTheme"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint = "#FFFFFFFF"
+    />
+    <!-- android:layout_height="wrap_content" invoke getView calls duplicate times android:layout_weight="1"
+    	[listview-(reativelayout-textview-padding)] => 394-(231-47-4)=214 
+    	android:layout_height="fill_parent" android:layout_height="214dp" android:paddingBottom="8dp"
+    	android:layout_height="195dp"
+    	-->
+    <TextView android:id="@+id/ds_result_count"
+                style="@style/ContactTheme"
+    		android:layout_width="fill_parent"
+         	android:layout_height="22dip"
+         	android:gravity="center_vertical"
+         	android:singleLine="true"
+         	android:focusable="false"
+        	android:textAppearance="?android:attr/textAppearanceSmall"
+        	android:textColor="#FFC0C2C3"
+        	android:paddingTop="0dip"        	
+        	android:paddingBottom="0dip"
+    	    android:paddingLeft="6dip"
+         	android:background="@drawable/contact_calllog_dialerseach_result_bg"
+         	android:layout_alignParentTop="true"
+    />	
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="14dip"
+		android:layout_marginTop="-14dip"
+		android:background="@drawable/phone_dial_bg_input_area_shadow" />
+	<RelativeLayout android:id="@+id/dial_search_pad" 
+		android:layout_width="match_parent"
+        android:layout_height="343dip"		 
+		android:layout_alignParentBottom="true">
+		
+		<ImageButton android:id="@+id/addToContactOnDigitButton"
+			android:layout_width="180px"
+			android:layout_height="57dip"
+			android:layout_alignParentLeft="true"			
+			android:layout_alignParentBottom = "true"
+			android:paddingTop="7dip"
+			android:paddingBottom="8dip"			
+			android:paddingLeft="28dip"
+			android:paddingRight="36dip"
+			android:src="@drawable/phone_dial_add_contact_button"
+			android:background="@drawable/phone_dial_bg_btn_add_contact" />
+			
+		<ImageButton android:id="@+id/dialsim1Button"
+			android:layout_width="180px"
+			android:layout_height="57dip"
+			android:state_enabled="false"
+			android:layout_alignParentBottom = "true"
+			android:paddingTop="7dip"
+			android:paddingBottom="8dip"			
+			android:paddingLeft="30dip"
+			android:paddingRight="33dip"
+			android:layout_toRightOf="@id/addToContactOnDigitButton"
+        	android:layout_alignBaseline="@id/addToContactOnDigitButton"
+        	android:src="@drawable/phone_dial_call_button"			
+			android:background="@drawable/phone_dial_bg_btn_call"
+		 />
+		
+		<ImageButton android:id="@+id/dialButtonVtAndMsg"
+			android:layout_width="180px"
+			android:layout_height="57dip"
+	        android:state_enabled="true"
+			android:layout_alignParentRight = "true"
+			android:layout_alignParentBottom = "true"
+			android:paddingTop="7dip"
+			android:paddingBottom="8dip"			
+			android:paddingLeft="30dip"
+			android:paddingRight="34dip"			
+        	android:layout_alignBaseline="@id/addToContactOnDigitButton"			
+	        android:src="@drawable/phone_dial_vt_button"
+	        android:background="@drawable/phone_dial_bg_btn_call_vt"	         
+	        android:nextFocusRight="@+id/dialButtonVt"/>
+
+<!--			 android:background="@android:color/transparent"android:layout_marginBottom="7dp" -->
+		<LinearLayout android:id="@+id/dial_panel" 
+			android:layout_width="match_parent" 
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight = "true"
+			android:layout_alignParentLeft = "true"	
+			android:layout_above = "@id/addToContactOnDigitButton" 
+			android:background="@drawable/background">
+				<!-- Keypad section -->
+			  	<include layout="@layout/dialpad_with_search" />
+			<!-- <include layout="@layout/dial1_dial2_dialpad" /> -->
+			<!-- <include layout="@layout/call_ecc" /> -->
+		</LinearLayout>	        
+		<LinearLayout
+			android:layout_width="match_parent" 
+			android:layout_height="57dip"
+			android:layout_above = "@id/dial_panel"
+			android:layout_alignParentLeft="true"
+		 	android:layout_alignParentTop = "true"
+		    android:layout_alignParentRight = "true"		 					
+			android:padding="6dip"
+			android:background="@drawable/phone_dial_bg_input_area" >
+		<EditText android:id="@+id/digits"
+	    	android:layout_width="290dip"
+			android:layout_height="45dip"
+			android:gravity="center_vertical|center"
+			android:maxLines="1"
+			android:scrollHorizontally="true"
+			android:textSize="32sp"
+			android:includeFontPadding="false"
+			android:paddingBottom="2dip"
+        	android:textColor="#FF4E4E4E"   
+			android:focusableInTouchMode="true"
+			android:editable="true"
+			android:layout_weight="0"
+			android:layout_marginRight="6dip" 			
+			android:contentDescription="@string/description_digits_edittext"
+			android:background="@drawable/phone_dial_bg_textfield" />
+		
+		<ImageButton android:id="@+id/deleteOnDigitButton"
+		    android:layout_width="54dip"
+		    android:layout_height="45dip"
+			android:gravity="center_vertical|center"     	
+		    android:src="@drawable/phone_dial_delete_button"
+		    android:background="@drawable/phone_dial_bg_btn_delete_num_button"/>
+		</LinearLayout>
+	</RelativeLayout>
+
+    <FrameLayout android:id="@+id/List"
+		    android:layout_width="fill_parent"
+         	android:layout_height="wrap_content"
+         	android:layout_below="@id/ds_result_count"
+            android:layout_above="@id/dial_search_pad">
+			<ListView android:id="@+id/ContactsList" 
+                  style="@style/ContactTheme"
+                  android:layout_width="match_parent" 
+                  android:layout_height="match_parent"
+                  android:fadingEdge="none"
+                  android:cacheColorHint="@android:color/white"
+             />
+<!--                                    -->
+<!--			<TextView android:id="@+id/user_tips" -->
+<!--                  android:layout_width="match_parent" -->
+<!--                  android:layout_height="wrap_content"-->
+<!--                  android:text="@string/ds_user_tips"/>-->
+    </FrameLayout>
+    <!--
+    <include layout="@layout/show_dialpad"         
+             style="@style/ContactTheme"/>
+    !-->
+    <LinearLayout 
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/showDialpad"
+        android:layout_width="match_parent" 
+        android:layout_height="57dip"
+        android:padding="6dip"
+        android:layout_gravity="bottom"
+        android:background="@drawable/phone_dial_bg_input_area"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+        <com.android.contacts.ui.widget.TextView
+            android:id="@+id/digitsHide"
+            android:layout_width="290dip"
+            android:layout_height="45dip"
+            android:gravity="center_vertical|center"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:textSize="32sp"
+            android:includeFontPadding="false"
+            android:paddingBottom="2dip"
+            android:textColor="#FF4E4E4E"   
+            android:enabled="false"
+            android:layout_weight="0"
+            android:layout_marginRight="6dip" 			
+            android:background="@drawable/phone_dial_bg_textfield" />
+
+        <ImageButton android:id="@+id/showDialpadButton"
+            android:layout_width="54dip"
+            android:layout_height="45dip"
+            android:gravity="center_vertical|center"     	
+            android:src="@drawable/phone_dial_btn_show_dialpad"
+           android:background="@drawable/phone_dial_bg_btn_delete_num_button"/>
+
+    </LinearLayout>
+</RelativeLayout>

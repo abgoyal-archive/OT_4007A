@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- In-call onscreen touch UI elements, used on some platforms.
+
+     This layout is a fullscreen overlay, drawn on top of the
+     non-touch-sensitive parts of the in-call UI (i.e. the call card).
+
+     The top-level View here is a FrameLayout with 2 children:
+       (1) incomingCallWidget: the UI displayed while an incoming call is ringing
+       (2) inCallControls: the widgets visible while a regular call (or calls) is in progress
+     Exactly one of these is visible at any given moment.
+     -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- (1) incomingCallWidget: the UI displayed while an incoming call is ringing. -->
+    <com.android.internal.widget.SlidingTab
+        android:id="@+id/incomingCallWidget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="80dip"
+        />
+
+    <android.widget.SlidingBar
+        android:id="@+id/slidingBar" 
+        android:layout_width="@dimen/incoming_call_slidingbar_width"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/incoming_call_button_margin_bottom"
+        android:layout_gravity="center_horizontal|bottom"
+        android:visibility="gone"/>
+
+    <LinearLayout android:id="@+id/incomingCallWidgetUnlocked"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:visibility="gone"
+                  android:layout_gravity="bottom"
+                  android:layout_marginLeft="@dimen/incoming_call_button_margin"
+                  android:layout_marginRight="@dimen/incoming_call_button_margin"
+                  android:layout_marginBottom="40dip"
+                  android:orientation="horizontal">
+
+        <Button android:id="@+id/answerButton"
+                android:layout_width="@dimen/incoming_call_button_width"
+                android:layout_height="@dimen/incoming_call_button_height"
+                android:layout_marginRight="@dimen/incoming_call_button_margin_internal"
+                android:text="@string/incoming_call_widget_answer_text"
+                android:textColor="#ECE2E2"
+                android:textSize="@dimen/incall_btn_end_call_text_size"
+                android:background="@drawable/incall_btn_answer"/>
+        
+        <Button android:id="@+id/rejectButton"
+                android:layout_width="@dimen/incoming_call_button_width"
+                android:layout_height="@dimen/incoming_call_button_height"
+                android:text="@string/incoming_call_widget_reject_text"
+                android:textColor="#ECE2E2"
+                android:textSize="@dimen/incall_btn_end_call_text_size"
+                android:background="@drawable/incall_btn_end"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/vtincomingcall" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="150dip"
+        android:textSize="20sp"
+        android:textColor="#79A51F"
+        android:text="@string/vt_video_call"
+        android:drawablePadding="10dip"
+        android:drawableTop="@drawable/vt_incoming_call">
+    </TextView>	
+
+    <!-- CDMA-specific "Merge" (upper left) -->
+    <!-- This button is used only on CDMA devices, where we can't use
+         the Merge button in the main cluster (because the "Add Call"
+         button might need to be enabled at the same time.) -->
+    <LinearLayout android:id="@+id/cdmaMergeButtonContainer"
+            style="@style/InCallRoundButtonContainer"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="280dip"
+            android:visibility="gone">
+        <ImageButton android:id="@+id/cdmaMergeButton"
+                style="@style/InCallRoundTouchButton"
+                android:src="@drawable/ic_in_call_touch_round_merge_call"
+                android:contentDescription="@string/onscreenMergeCallsText" />
+        <TextView
+            style="@style/InCallRoundButtonLabel"
+            android:text="@string/onscreenMergeCallsText" />
+    </LinearLayout>
+    
+    <!-- Bottom Buttons Start -->
+    <!-- "Mute" -->
+    <Button android:id="@+id/muteButton"
+            style="@style/InCallButtonGroupStyle"
+            android:text="@string/onscreenMuteText"
+            android:drawableTop="@drawable/incall_btn_mute"
+            android:background="@drawable/incall_btn_group"
+            android:layout_gravity="left|bottom"
+            android:layout_marginLeft="43dip"
+            android:layout_marginBottom="186dip"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:scrollHorizontally="true"
+            android:layout_marginRight="@dimen/incall_btn_group_margin_internal"
+            />
+
+    <!-- "Hold" -->
+    <Button android:id="@+id/holdButton"
+            style="@style/InCallButtonGroupStyle"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="186dip"
+            android:text="@string/onscreenHoldText"
+            android:drawableTop="@drawable/incall_btn_hold"
+            android:background="@drawable/incall_btn_group"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:scrollHorizontally="true"/>
+
+    <!-- "Swap" -->
+    <Button android:id="@+id/swapButton"
+            style="@style/InCallButtonGroupStyle"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="186dip"
+            android:text="@string/onscreenSwapCallsText"
+            android:drawableTop="@drawable/incall_btn_swap"
+            android:background="@drawable/incall_btn_group"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:scrollHorizontally="true"
+            />
+
+    <!-- "Speaker" -->
+    <Button android:id="@+id/speakerButton"
+            style="@style/InCallButtonGroupStyle"
+            android:layout_gravity="right|bottom"
+            android:layout_marginRight="43dip"
+            android:layout_marginBottom="186dip"
+            android:text="@string/onscreenSpeakerText"
+            android:drawableTop="@drawable/incall_btn_speaker"
+            android:background="@drawable/incall_btn_group"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:scrollHorizontally="true"
+            />
+              
+    <!-- "Contact" -->
+    <Button android:id="@+id/contactButton"
+            style="@style/InCallButtonGroupStyle"
+            android:text="@string/contactsIconLabel"
+            android:drawableTop="@drawable/incall_btn_contact"
+            android:layout_marginLeft="43dip"
+            android:layout_marginBottom="120dip"
+            android:layout_gravity="left|bottom"
+            android:background="@drawable/incall_btn_group"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:scrollHorizontally="true"/>
+
+    <!-- "Add Call" -->
+    <Button android:id="@+id/addButton"
+            style="@style/InCallButtonGroupStyle"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="120dip"
+            android:text="@string/onscreenAddCallText"
+            android:drawableTop="@drawable/incall_btn_add"
+            android:background="@drawable/incall_btn_group"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:scrollHorizontally="true"/>
+
+    <!-- "Merge calls" -->
+    <Button android:id="@+id/mergeButton"
+            style="@style/InCallButtonGroupStyle"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="120dip"
+            android:text="@string/onscreenMergeCallsText"
+            android:drawableTop="@drawable/incall_btn_merge"
+            android:background="@drawable/incall_btn_group"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:scrollHorizontally="true"
+            />
+    
+    <!-- "Dialpad" -->
+    <Button android:id="@+id/dialpadButton"
+            style="@style/InCallButtonGroupStyle"
+            android:layout_marginBottom="120dip"
+            android:layout_marginRight="43dip"
+            android:text="@string/onscreenShowDialpadText"
+            android:drawableTop="@drawable/incall_btn_dialpad"
+            android:background="@drawable/incall_btn_group"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:scrollHorizontally="true"
+            android:layout_gravity="right|bottom"/>
+
+    <!-- "End call" -->
+    <Button android:id="@+id/endButton"
+            android:layout_width="@dimen/incall_btn_end_call_width"
+            android:layout_height="@dimen/incall_btn_end_call_height"
+            android:layout_marginBottom="40dip"
+            android:layout_gravity="bottom|center_horizontal"
+            android:text="@string/onscreenEndCallText"
+            android:textColor="#ECE2E2"
+            android:background="@drawable/incall_btn_end"
+            android:layout_below="@id/contactButton"
+            android:textSize="@dimen/incall_btn_end_call_text_size"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:scrollHorizontally="true"/>
+    <!-- Bottom Buttons End -->
+
+    <!-- DTMF dialpad shown in the upper part of the screen
+             (above the main cluster of buttons.) -->
+    <!-- TODO: this should be a ViewStub, and should only get inflated
+             when first needed. -->
+    <include layout="@layout/non_drawer_dialpad_ge"/>
+</FrameLayout>

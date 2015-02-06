@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+        >
+	<MmsWidgetSettingRemoteView android:id="@+id/mms_setting_layout"
+		android:tag="mms_setting_layout" android:layout_width="fill_parent"
+		android:layout_height="473dip" android:layout_marginTop="20dip"
+		android:background="@drawable/wgt_message_setting_bg">
+		<include android:id="@+id/mms_widget_setting_loading_layout"
+			layout="@layout/mms_widget_setting_loading_layout" />
+		<include android:id="@+id/mms_widget_setting_no_subscriber_layout"
+			layout="@layout/mms_widget_setting_no_subscriber_layout" />
+		<include android:id="@+id/mms_widget_setting_subscriber_layout"
+			layout="@layout/mms_widget_setting_subscriber_layout" />
+	</MmsWidgetSettingRemoteView>
+	<ImageView android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:layout_alignParentTop="true"
+		android:layout_marginTop="22dip" android:layout_marginLeft="8dip"
+		android:layout_marginRight="8dip" android:background="@drawable/wgt_message_bg_color_bar" />
+</RelativeLayout>

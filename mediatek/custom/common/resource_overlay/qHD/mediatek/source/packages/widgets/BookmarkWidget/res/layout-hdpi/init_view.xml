@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:background="@drawable/frame"
+        android:layout_width="471.0dip"
+        android:layout_height="486.0dip"
+        android:layout_marginTop="48.0px"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:textSize="21.0sp"
+            android:textColor="#ff252525"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="62.0px"
+            android:text="@string/title"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+            android:textSize="21.0sp"
+            android:textColor="#ffffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="61.0px"
+            android:text="@string/title"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            />
+        <include
+            android:id="@id/load_bookmark"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="130.0dip"
+            android:layout_centerHorizontal="true"
+            layout="@layout/load"
+            />
+    </RelativeLayout>
+</RelativeLayout>

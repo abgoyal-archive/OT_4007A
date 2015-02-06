@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:tag="mms_widget_setting_subscriber_layout"
+	android:layout_width="match_parent" android:layout_height="match_parent"
+	android:visibility="invisible">
+	<RelativeLayout android:layout_width="wrap_content"
+		android:layout_height="333dip" android:layout_alignParentTop="true"
+                android:layout_marginTop="9dip"
+		android:layout_centerHorizontal="true">
+		<MmsSettingAnimView android:id="@+id/mms_setting_grid_layout"
+			android:tag="mms_setting_anim_view" android:layout_width="wrap_content"
+			android:layout_height="500px" android:layout_centerVertical="true"
+			android:gravity="center_vertical">
+			<include android:id="@+id/mms_widget_setting_grid_layout_1"
+				layout="@layout/mms_widget_setting_grid_layout" />
+			<include android:id="@+id/mms_widget_setting_grid_layout_2"
+				layout="@layout/mms_widget_setting_grid_layout" />
+			<include android:id="@+id/mms_widget_setting_grid_layout_3"
+				layout="@layout/mms_widget_setting_grid_layout" />
+		</MmsSettingAnimView>
+		<TextView android:tag="setting_indicator"
+			android:layout_width="116dip" android:layout_height="33dip"
+			android:layout_centerHorizontal="true" android:background="@drawable/setting_indicator_bg"
+			android:textSize="15sp" android:textColor="#ffffffff"
+			android:singleLine="true" android:gravity="center"
+			android:visibility="invisible" />
+	</RelativeLayout>
+	<include layout="@layout/mms_widget_setting_control_bar" />
+</RelativeLayout>
